@@ -1,11 +1,12 @@
 package com.learning.blogapp.articles;
 
 import java.util.*;
-import jakarta.persistence.Column;
+
 import org.springframework.data.annotation.CreatedDate;
 
 import com.learning.blogapp.users.UserEntity;
 
+import io.micrometer.common.lang.Nullable;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ import lombok.AccessLevel;
 @Getter
 @Entity
 @ToString
+
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
@@ -29,12 +31,16 @@ public class ArticleEntity {
     @Column(nullable = false)
     private Long id;
     @NonNull
-    
-
-
     private String title;
+
+    @NonNull
+    @Column(unique = true)
     private String slug;
+    
+    @Nullable
     private String subtitle;
+
+    @NonNull
     private String body;
 
     @CreatedDate

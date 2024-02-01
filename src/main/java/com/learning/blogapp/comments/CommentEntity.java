@@ -2,11 +2,8 @@ package com.learning.blogapp.comments;
 
 import java.util.*;
 import jakarta.persistence.Column;
-
-
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
-
 import com.learning.blogapp.articles.ArticleEntity;
 import com.learning.blogapp.users.UserEntity;
 
@@ -19,12 +16,14 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 
+@Entity(name = "comments")
 @Setter
 @Getter
-@Entity
 @ToString
 @RequiredArgsConstructor
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
 
