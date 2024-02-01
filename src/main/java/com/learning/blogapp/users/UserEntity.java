@@ -1,18 +1,19 @@
 package com.learning.blogapp.users;
 
 import jakarta.persistence.*;
-import io.micrometer.common.lang.NonNull;
-import io.micrometer.common.lang.Nullable;
+import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
 import lombok.*;
 
-
+@Entity(name = "users")
 @Setter
 @Getter
-@Entity(name = "users")
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+
 
 public class UserEntity {
     @Id
@@ -23,6 +24,7 @@ public class UserEntity {
     @Column(nullable=false)
     @NonNull
     private String username;
+    
     @Column(nullable = false)
     @NonNull
     private String password;

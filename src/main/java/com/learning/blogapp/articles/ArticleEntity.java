@@ -15,13 +15,17 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
 @Setter
 @Getter
 @Entity
 @ToString
+@Builder
 
 @RequiredArgsConstructor
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
 
@@ -30,6 +34,7 @@ public class ArticleEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(nullable = false)
     private Long id;
+    
     @NonNull
     private String title;
 
