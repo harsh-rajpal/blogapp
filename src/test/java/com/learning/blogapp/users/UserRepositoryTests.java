@@ -27,8 +27,8 @@ public class UserRepositoryTests{
     @Order(2)
     void can_find_users() {
         var user = UserEntity.builder()
-                .username("arnavg")
-                .email("arnav@blog.com")
+                .username("harsh")
+                .email("harsh@gmail.com")
                 .build();
 
         usersRepository.save(user);

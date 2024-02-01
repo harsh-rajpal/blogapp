@@ -1,15 +1,15 @@
-// package com.learning.blogapp;
+package com.learning.blogapp;
 
-// import org.checkerframework.checker.units.qual.C;
-// import org.springframework.context.annotation.Bean;
-// import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.checkerframework.checker.units.qual.C;
+import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-// @Configuration
+@Configuration
 
-// public class JpaTestConfig {
-//     @Bean
-//     public DataSource dataSource() {
-//         var dataSource = new DriverManagerDataSource()
-//     }
+public class JpaTestConfig {
+    @Bean
+    public DataSource dataSource() {
+        var dataSource = new DriverManagerDataSource()
+    }
     
-// }
+}
